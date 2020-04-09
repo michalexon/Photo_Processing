@@ -1,0 +1,22 @@
+﻿<Window x:Class="Photo_Processing.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Photo_Processing"
+        mc:Ignorable="d"
+        Title="Photo Processing" Height="700" Width="1200" ResizeMode="NoResize">
+    <Grid Background="LightGray">
+        <Grid Margin="334,10,10,330" Background="Gray"></Grid>
+        <Grid Margin="334,346,10,10" Background="Gray"></Grid>
+        <TextBlock Margin="267,175,844,457">Old image:</TextBlock>
+        <TextBlock Margin="267,490,831,137">New image:</TextBlock>
+        <Button Name="ButtonLoader" Margin="10,193,961,418" Command="{Binding ButtonLoader}">Load image from file</Button>
+        <Button Name="ButtonSync" Margin="10,296,961,315" Command="{Binding ButtonSync}">Change colors (Sync)</Button>
+        <Button Name="ButtonAsync" Margin="10,361,961,250" Command="{Binding ButtonAsync}">Change colors (Async)</Button>
+        <Image Name="OldImage" Source="{Binding OldImage}" Margin="334,10,10,330" ></Image>
+        <Image Name="NewImage" Source="{Binding NewImage}" Margin="334,346,10,10" />
+        <TextBlock Name="TextTimer" Margin="10,614,904,10" Text="{Binding TextTimer}"></TextBlock>
+        <TextBlock Margin="0,0,876,515" FontSize="36" FontWeight="Bold">Photo Processing</TextBlock>
+    </Grid>
+</Window>
